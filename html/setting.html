@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>settings</title>
+	<link rel="stylesheet" type="text/css" href="../css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+<!-- start navbar -->
+<nav class="flex-direction">
+	<h1>diyar</h1>
+	<div class="flex-direction">
+		<a href="index.html"><i class="fa-regular fa-chart-bar fa-fw"></i><span> dashboard</span></a>
+		<a href="#body" class="active"><i class="fa-solid fa-gear fa-fw"></i><span> settings</span></a>
+		<a href="profile.html"><i class="fa-regular fa-user fa-fw"></i><span> profile</span></a>
+		<a href="project.html"><i class="fa-solid fa-diagram-project fa-fw"></i><span> projects</span></a>
+		<a href="courses.html"><i class="fa-solid fa-graduation-cap fa-fw"></i><span>  courses</span></a>
+		<a href="friends.html"><i class="fa-regular fa-circle-user fa-fw"></i><span> friends</span></a>
+		<a href="file.html"><i class="fa-regular fa-file fa-fw"></i><span> files</span></a>
+		<a href="plans.html"><i class="fa-regular fa-credit-card fa-fw"></i><span> plans</span></a>
+	</div>
+</nav>
+<!-- end navbar -->
+
+<!-- start main -->
+
+<main class="main flex">
+	<article class="flex">
+
+		<!-- start header -->
+
+	  <header class="flex ">
+		<div class="flex search">
+		<label for="search">&#xf002;</label> 
+		<input type="search" name="" placeholder="Type A Keyword" id="search">
+		</div>
+		<div class="flex">
+			<i class="fa-regular fa-bell fa-lg"></i>
+			<img src="../img/avatar-04.png">
+		</div>
+	  </header>
+
+	  <!-- end header -->
+	  <main class="padding" id="body">
+
+	  <h1 class="main-text">settings</h1>
+
+	  <div class="grid">
+
+
+	  	<div class="flex padding setting">
+	  		<h1>Site Control</h1>
+	  		<p>Control The Website If There Is Maintenance</p>
+	  		<div class="space mb-10">
+	  			<div>
+	  			<span>Website Control</span>
+	  			<p>Open/Close Website And Type The Reason</p>
+	  			</div>
+	  			<label for="check">
+	  				<input type="checkbox" name="" id="check" class="none" class="checked" checked>
+	  				<div class="button"></div>
+	  			</label>
+
+	  		</div>
+	  			<textarea placeholder="close message content"></textarea>
+	  	</div>
+
+	  	<form class="flex padding info">
+	  		<h1>General Info</h1>
+	  		<p>General Information About Your Account</p>
+	  		<label for="name">first name</label>
+	  		<input type="text" name="" placeholder="first name" id="name" required>
+	  		<label for="last">last name</label>
+	  			<input id="last" type="text" placeholder="last name" required>
+	  			<label for="email">email</label>
+	  			<input type="email" name="" id="email" required placeholder="diyar@gmail.com">
+	  			<input type="submit" name="" value="change">
+	  	</form>
+
+	  	<div class="flex padding security">
+	  		<h1>Security info</h1>
+	  		<p>Security Information About Your Account</p>
+	  		<div class="space">
+	  			<div><h2>password</h2><p>Last Change On 25/10/2021</p></div>
+	  			<a class="blue-button" href="#">change</a>
+	  		</div>
+	  		<div class="space">
+	  			<div><h2>Two-Factor Authentication</h2><p>Enable/Disable The Feature</p></div>
+	  			<label for="checked">
+	  				<input type="checkbox" name="" id="checked" class="none" class="checked" checked>
+	  				<div class="button"></div>
+	  			</label>	
+	  		</div>
+	  		<div class="space">
+	  			<div><h2>Devices</h2><p>Check The Login Devices List</p></div>
+	  			<a class="orang-button" href="#">devices</a>
+	  		</div>
+	  	</div>
+
+	  	<div class="padding social-info flex">
+	  		<h1>social info</h1>
+	  		<p>Social Media Information</p>
+	  		<div class="flex">
+	  			<label for="facebook"><i class="fa-brands fa-facebook-f"></i></label>
+	  			<input type="text" placeholder="facebook username" name="" id="facebook">
+	  		</div>
+	  		<div class="flex">
+	  			<label for="twitter"><i class="fa-brands fa-twitter"></i></label>
+	  			<input type="text" placeholder="twitter username" name="" id="twitter">
+	  		</div>
+	  		<div class="flex">
+	  			<label for="youtube"><i class="fa-brands fa-youtube"></i></label>
+	  			<input type="text" placeholder="youtube username" name="" id="youtube">
+	  		</div>
+	  		<div class="flex">
+	  			<label for="instagram"><i class="fa-brands fa-instagram"></i></label>
+	  			<input type="text" placeholder="instagram username" name="" id="instagram">
+	  		</div>
+	  	</div>
+
+	  	<div class="flex padding control">
+	  		<h1>Widgets Control</h1>
+	  		<p>Show/Hide Widgets</p>
+	  		<div>
+	  		<input type="checkbox" name="" id="s" checked> <label for="s">Quick Draft</label>
+	  		</div>
+	  		<div>
+	  		<input type="checkbox" name="" id="d" checked> <label for="d">Yearly Targets</label>
+	  		</div>
+	  		<div>
+	  		<input type="checkbox" name="" id="i"> <label for="i">Tickets Statistics</label>
+	  		</div>
+	  		<div>
+	  		<input type="checkbox" name="" id="m" checked> <label for="m">Latest News</label>
+	  		</div>
+	  		<div>
+	  		<input type="checkbox" name="" id="t" checked> <label for="t">Latest tasks</label>
+	  		</div>
+	  		<div>
+	  		<input type="checkbox" name="" id="a" > <label for="a">Top Search Items</label>
+	  		</div>
+	  	</div>
+
+	  	<div class="padding manager flex">
+	  		<h1>bakup manager</h1>
+	  		<p>Control Backup Time And Location</p>
+	  		<div><input type="radio" name="s" id="diyar" checked><label for="diyar">daily</label></div>
+	  		<div><input type="radio" name="s" id="diyar2"><label for="diyar2">weekly</label></div>
+	  		<div><input type="radio" name="s" id="diyar3"><label for="diyar3">monthly</label></div>
+
+	  		<div class="space">
+
+	  			<label for="diyar4">
+	  				<input type="radio"  name="d" id="diyar4">
+	  				<div>
+	  					<i class="fa-solid fa-server"></i>
+	  				     <span>mangaman</span>
+	  				</div>
+
+	  			</label>
+
+	  			<label for="diyar5">
+	  				<input type="radio" checked name="d" id="diyar5">
+	  				<div>
+	  					<i class="fa-solid fa-server"></i>
+	  				     <span>diyar</span>
+	  				</div>
+	  			</label>
+
+	  			<label for="diyar6">
+	  				<input type="radio"  name="d" id="diyar6">
+	  				<div>
+	  					<i class="fa-solid fa-server"></i>
+	  				     <span>sidar</span>
+	  				</div>
+	  			</label>
+
+	  		</div>
+	  	</div>
+
+
+
+       </div>
+
+	  </main>
+
+	</article>
+</main>
+
+
+<!-- end main -->
+
+</body>
+</html>

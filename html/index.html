@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>dashboard</title>
+    <link rel="stylesheet" type="text/css" href="../css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+  </head>
+  <body>
+    <!-- start navbar -->
+    <nav class="flex-direction">
+      <h1>diyar</h1>
+      <div class="flex-direction">
+        <a href="#body" class="active"
+          ><i class="fa-regular fa-chart-bar fa-fw"></i
+          ><span> dashboard</span></a
+        >
+        <a href="setting.html"
+          ><i class="fa-solid fa-gear fa-fw"></i><span> settings</span></a
+        >
+        <a href="profile.html"
+          ><i class="fa-regular fa-user fa-fw"></i><span> profile</span></a
+        >
+        <a href="project.html"
+          ><i class="fa-solid fa-diagram-project fa-fw"></i
+          ><span> projects</span></a
+        >
+        <a href="courses.html"
+          ><i class="fa-solid fa-graduation-cap fa-fw"></i
+          ><span> courses</span></a
+        >
+        <a href="friends.html"
+          ><i class="fa-regular fa-circle-user fa-fw"></i
+          ><span> friends</span></a
+        >
+        <a href="file.html"
+          ><i class="fa-regular fa-file fa-fw"></i><span> files</span></a
+        >
+        <a href="plans.html"
+          ><i class="fa-regular fa-credit-card fa-fw"></i><span> plans</span></a
+        >
+      </div>
+    </nav>
+    <!-- end navbar -->
+
+    <!-- start main -->
+
+    <main class="main flex">
+      <article class="flex">
+        <!-- start header -->
+
+        <header class="flex padding">
+          <div class="flex search">
+            <label for="search">&#xf002;</label>
+            <input
+              type="search"
+              name=""
+              placeholder="Type A Keyword"
+              id="search"
+            />
+          </div>
+          <div class="flex">
+            <i class="fa-regular fa-bell fa-lg"></i>
+            <img src="../img/avatar-04.png" />
+          </div>
+        </header>
+
+        <!-- end header -->
+        <main class="padding" id="body">
+          <h1 class="main-text">dashboard</h1>
+
+          <div class="grid">
+            <div class="flex welcome">
+              <div class="info flex">
+                <div>
+                  <h1>Welcome</h1>
+                  <p>diyar</p>
+                </div>
+                <img src="../img/welcome.png" />
+                <img src="../img/avatar-04.png" class="img" />
+              </div>
+              <div class="flex text">
+                <h3>
+                  diyar direki <br />
+                  <p>Developer</p>
+                </h3>
+                <h3>
+                  80 <br />
+                  <p>projects</p>
+                </h3>
+                <h3>
+                  8500$ <br />
+                  <p>earend</p>
+                </h3>
+              </div>
+              <a href="profile.html" class="blue-button">profile</a>
+            </div>
+
+            <div class="flex padding draft">
+              <h1>Quick Draft</h1>
+              <p>Write A Draft For Your Ideas</p>
+              <input type="text" name="" placeholder="title" />
+              <textarea placeholder="your thought"></textarea>
+              <a class="blue-button" href="#"> save</a>
+            </div>
+
+            <div class="flex target padding">
+              <h1>Yearly Targets</h1>
+              <p>Targets Of The Year</p>
+              <div class="flex">
+                <i class="fa-solid fa-dollar-sign fa-lg money"></i>
+                <article class="info">
+                  <p>money</p>
+                  <h2>$20.00</h2>
+                  <div class="money"><span style="width: 80%"></span></div>
+                </article>
+              </div>
+
+              <div class="flex">
+                <i class="fa-solid fa-code fa-lg code"></i>
+                <article class="info">
+                  <p>projects</p>
+                  <h2>24</h2>
+                  <div class="code"><span style="width: 55%"></span></div>
+                </article>
+              </div>
+
+              <div class="flex">
+                <i class="fa-solid fa-user fa-lg team"></i>
+                <article class="info">
+                  <p>team</p>
+                  <h2>12</h2>
+                  <div class="team"><span style="width: 75%"></span></div>
+                </article>
+              </div>
+            </div>
+
+            <div class="flex ticket padding">
+              <h1>Tickets Statistics</h1>
+              <p>Everything About Support Tickets</p>
+              <div class="flex">
+                <div class="flex-direction">
+                  <i class="fa-regular fa-rectangle-list fa-2x"></i>
+                  <h2>2000</h2>
+                  <p>total</p>
+                </div>
+
+                <div class="flex-direction">
+                  <i class="fa-solid fa-spinner fa-2x"></i>
+                  <h2>500</h2>
+                  <p>Pending</p>
+                </div>
+                <div class="flex-direction">
+                  <i class="fa-regular fa-circle-check fa-2x"></i>
+                  <h2>1900</h2>
+                  <p>closed</p>
+                </div>
+                <div class="flex-direction">
+                  <i class="fa-regular fa-rectangle-xmark fa-2x"></i>
+                  <h2>100</h2>
+                  <p>deleted</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex news padding">
+              <h1>Latest News</h1>
+              <div class="flex">
+                <img src="../img/news-01.png" />
+                <div class="flex-direction">
+                  <h2>Created SASS Section</h2>
+                  <span>New SASS Examples & Tutorials</span>
+                </div>
+                <article>3 days ago</article>
+              </div>
+
+              <div class="flex">
+                <img src="../img/news-02.png" />
+                <div class="flex-direction">
+                  <h2>Changed The Design</h2>
+                  <span>A Brand New Website Design</span>
+                </div>
+                <article>7 days ago</article>
+              </div>
+
+              <div class="flex">
+                <img src="../img/news-03.png" />
+                <div class="flex-direction">
+                  <h2>Team Increased</h2>
+                  <span>3 Developers Joined The Team</span>
+                </div>
+                <article>8 days ago</article>
+              </div>
+
+              <div class="flex">
+                <img src="../img/news-04.png" />
+                <div class="flex-direction">
+                  <h2>Added Payment Gateway</h2>
+                  <span>Many New Payment Gateways Added</span>
+                </div>
+                <article>9 days ago</article>
+              </div>
+            </div>
+
+            <div class="flex padding tasks">
+              <h1>Latest Tasks</h1>
+              <div class="flex-direction">
+                <h2>Record One New Video</h2>
+                <p>Record Python Create Exe Project</p>
+                <i class="fa-regular fa-trash-can delete"></i>
+              </div>
+
+              <div class="flex-direction">
+                <h2>Write Article</h2>
+                <p>Write Low Level vs High Level Languages</p>
+                <i class="fa-regular fa-trash-can delete"></i>
+              </div>
+
+              <div class="flex-direction">
+                <h2>Finish Project</h2>
+                <p>Publish Academy Programming Project</p>
+                <i class="fa-regular fa-trash-can delete"></i>
+              </div>
+
+              <div class="flex-direction">
+                <h2>Finish Lesson</h2>
+                <p>Finish Teaching Flex Box</p>
+                <i class="fa-regular fa-trash-can delete"></i>
+              </div>
+
+              <div class="flex-direction">
+                <h2>Attend The Meeting</h2>
+                <p>Attend The Project Business Analysis Meeting</p>
+                <i class="fa-regular fa-trash-can delete"></i>
+              </div>
+            </div>
+
+            <div class="flex padding search">
+              <h1 class="mb-10">Top Search Items</h1>
+              <div class="flex">
+                <span>keybword</span> <span>search count</span>
+              </div>
+              <article class="flex">
+                <h2>programing</h2>
+                <span>220</span>
+              </article>
+              <article class="flex">
+                <h2>javascript</h2>
+                <span>100</span>
+              </article>
+              <article class="flex">
+                <h2>php</h2>
+                <span>160</span>
+              </article>
+              <article class="flex">
+                <h2>code</h2>
+                <span>140</span>
+              </article>
+              <article class="flex">
+                <h2>desing</h2>
+                <span>120</span>
+              </article>
+              <article class="flex">
+                <h2>logic</h2>
+                <span>20</span>
+              </article>
+            </div>
+
+            <div class="padding uplodas flex">
+              <h1 class="mb-10">Latest Uploads</h1>
+              <div class="flex">
+                <img src="../img/pdf.svg" />
+                <div class="flex-direction">
+                  <h3>my-file.pdf</h3>
+                  <p>diyar</p>
+                </div>
+                <span>2.8mb</span>
+              </div>
+
+              <div class="flex">
+                <img src="../img/avi.svg" />
+                <div class="flex-direction">
+                  <h3>My-Video-File.avi</h3>
+                  <p>admin</p>
+                </div>
+                <span>5.8mb</span>
+              </div>
+
+              <div class="flex">
+                <img src="../img/psd.svg" />
+                <div class="flex-direction">
+                  <h3>My-Psd-File.psd</h3>
+                  <p>sidar</p>
+                </div>
+                <span>1.9mb</span>
+              </div>
+
+              <div class="flex">
+                <img src="../img/zip.svg" />
+                <div class="flex-direction">
+                  <h3>my-zip-file.zip</h3>
+                  <p>user</p>
+                </div>
+                <span>100mb</span>
+              </div>
+              <div class="flex">
+                <img src="../img/dll.svg" />
+                <div class="flex-direction">
+                  <h3>my-dll-file.pdf</h3>
+                  <p>desiner</p>
+                </div>
+                <span>2.9mb</span>
+              </div>
+
+              <div class="flex">
+                <img src="../img/eps.svg" />
+                <div class="flex-direction">
+                  <h3>my-eps-file.pdf</h3>
+                  <p>admin</p>
+                </div>
+                <span>4.6mb</span>
+              </div>
+            </div>
+
+            <div class="flex padding project">
+              <h1 class="">last Project Progress</h1>
+              <img src="../img/project.png" />
+              <div class="flex-direction">
+                <h2>Got The Project</h2>
+                <h2>Started The Project</h2>
+                <h2>The Project About To Finish</h2>
+                <h2>Test The Project</h2>
+                <h2>Finish The Project & Get Money</h2>
+              </div>
+            </div>
+
+            <div class="flex padding reminders">
+              <h1 class="mb-10">reminders</h1>
+              <div>
+                <h2>Check My Tasks List</h2>
+                <p>2022/5/26 - 2:50 am</p>
+              </div>
+              <div>
+                <h2>Check My Projects</h2>
+                <p>2005/9/25 - 10:00pm</p>
+              </div>
+              <div>
+                <h2>Call All My Clients</h2>
+                <p>2003/10/11 - 09:40 pm</p>
+              </div>
+              <div>
+                <h2>Finish The Development Workshop</h2>
+                <p>2022/5/21 - 10:38pm</p>
+              </div>
+            </div>
+
+            <div class="flex padding post">
+              <h1 class="mb-10">Latest Post</h1>
+              <div class="flex mb-10 post">
+                <img src="../img/avatar-04.png" />
+                <div>
+                  <h2>diyar direki</h2>
+                  <p>about 7 hours ago</p>
+                </div>
+              </div>
+              <span
+                >You Can Fool All Of The People Some Of The Time, And Some Of
+                The People All Of The Time, But You Can't Fool All Of The People
+                All Of The Time.</span
+              >
+              <div class="space mb-10">
+                <div class="flex">
+                  <i class="fa-regular fa-heart"></i> <span>1.8k</span>
+                </div>
+                <div class="flex">
+                  <i class="fa-regular fa-comments"></i> <span>500</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="social flex padding">
+              <h1 class="mb-10">Social Media Stats</h1>
+              <div class="flex">
+                <i class="fa-brands fa-twitter fa-2x flex"></i>
+                <div class="space twitter">
+                  <span class="twitter">100 followers</span>
+                  <a class="button twitter" href="#">follow</a>
+                </div>
+              </div>
+              <div class="flex">
+                <i class="fa-brands fa-facebook-f fa-2x flex"></i>
+                <div class="space facebook">
+                  <span class="facebook">2.8k like</span>
+                  <a class="button facebook" href="#">like</a>
+                </div>
+              </div>
+              <div class="flex">
+                <i class="fa-brands fa-youtube fa-2x flex"></i>
+                <div class="space youtube">
+                  <span class="youtube">1m subs</span>
+                  <a class="button youtube" href="#">Subscribe</a>
+                </div>
+              </div>
+
+              <div class="flex">
+                <i class="fa-brands fa-instagram fa-2x flex"></i>
+                <div class="space instagram">
+                  <span class="instagram">2k followers</span>
+                  <a class="button instagram" href="#">follow</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="table padding">
+            <h1 class="mb-10">projects</h1>
+            <div class="table">
+              <table>
+                <thead>
+                  <th>name</th>
+                  <th>finish date</th>
+                  <th>client</th>
+                  <th>price</th>
+                  <th>team</th>
+                  <th>status</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Ministry Wikipedia</td>
+                    <td>10 May 2022</td>
+                    <td>Ministry</td>
+                    <td>$5300</td>
+                    <td>
+                      <img src="../img/avatar-04.png" />
+                      <img src="../img/avatar-02.png" />
+                      <img src="../img/avatar-01.png" />
+                    </td>
+                    <td><span class="orang-button"> pending</span></td>
+                  </tr>
+                  <tr>
+                    <td>sidar shop</td>
+                    <td>2022/5/6</td>
+                    <td>sidar compnay</td>
+                    <td>$1500</td>
+                    <td>
+                      <img src="../img/avatar-02.png" />
+                      <img src="../img/avatar-03.png" />
+                      <img src="../img/avatar-01.png" />
+                    </td>
+                    <td><span class="blue-button">In Progress</span></td>
+                  </tr>
+                  <tr>
+                    <td>boda app</td>
+                    <td>25 Sep 2023</td>
+                    <td>boda</td>
+                    <td>$800</td>
+                    <td>
+                      <img src="../img/avatar-01.png" />
+                      <img src="../img/avatar-04.png" />
+                      <img src="../img/avatar-02.png" />
+                    </td>
+                    <td><span class="green-button">completed</span></td>
+                  </tr>
+                  <tr>
+                    <td>rowan Website</td>
+                    <td>22 May 2021</td>
+                    <td>rowan</td>
+                    <td>$400</td>
+                    <td>
+                      <img src="../img/avatar-04.png" />
+                      <img src="../img/avatar-02.png" />
+                    </td>
+                    <td><span class="red-button">Rejected</span></td>
+                  </tr>
+
+                  <tr>
+                    <td>Arena Application</td>
+                    <td>01 Mar 2021</td>
+                    <td>Arena Company</td>
+                    <td>$2600</td>
+                    <td>
+                      <img src="../img/avatar-01.png" />
+                      <img src="../img/avatar-04.png" />
+                      <img src="../img/avatar-02.png" />
+                    </td>
+                    <td><span class="green-button">completed</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </main>
+      </article>
+    </main>
+    <!-- end main -->
+    <script>
+      let del = document.querySelectorAll("div.tasks .delete");
+
+      del.forEach((e) => {
+        e.addEventListener("click", (e) => {
+          e.target.parentElement.remove();
+        });
+      });
+    </script>
+  </body>
+</html>

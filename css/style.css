@@ -1,0 +1,2417 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: monospace;
+  text-transform: capitalize;
+}
+main,
+img {
+  max-width: 100%;
+  position: relative;
+}
+a {
+  text-decoration: none;
+}
+body {
+  background: #f1f5f9;
+}
+html {
+  scroll-behavior: smooth;
+}
+input,
+textarea {
+  outline: none;
+}
+input:focus {
+  outline: none;
+}
+textarea {
+  resize: none;
+}
+:root {
+  --main-transiton: 0.4s;
+  --blue-color: #0075ff;
+  --padding: 25px 20px;
+  --active-page-color: #f6f6f6;
+  --sub-color: #777;
+  --blue-hover: #0561cc;
+  --b-eee: #eee;
+  --orang-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+}
+.active {
+  background: #f6f6f6;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-direction {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+.padding {
+  padding: var(--padding);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(406px, 1fr));
+  grid-gap: 20px;
+  margin-bottom: 20px;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+.space {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.none {
+  display: none;
+}
+.bg-o {
+  background: var(--orang-color);
+}
+.bg-b {
+  background: var(--blue-color);
+}
+.bg-r {
+  background: var(--red-color);
+}
+.bg-g {
+  background: var(--green-color);
+}
+.none {
+  display: none;
+}
+/*start navbar*/
+
+nav {
+  position: fixed;
+  padding: 20px;
+  width: 240px;
+  background: white;
+  height: 100%;
+  box-shadow: 1px 0px 6px 0px #b8b8b894;
+  z-index: 1000;
+}
+nav h1 {
+  margin-bottom: 50px;
+  position: relative;
+}
+nav h1::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 2px;
+  background: black;
+  bottom: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+nav h1::after {
+  content: "";
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: solid 4px white;
+}
+nav div.flex-direction {
+  width: 100%;
+}
+nav div.flex-direction a {
+  width: 100%;
+  padding: 12px 10px;
+  border-radius: 6px;
+  color: black;
+  margin-bottom: 15px;
+  transition: var(--main-transiton);
+}
+nav div.flex-direction a:hover {
+  background: var(--active-page-color);
+}
+nav div.flex-direction a span {
+  margin-left: 10px;
+  font-size: 15px;
+}
+/*end navbar*/
+
+/*start main*/
+main.main {
+  justify-content: flex-end;
+}
+main.main > article.flex {
+  width: calc(100% - 240px);
+}
+
+/*start header*/
+
+main.main > article.flex header {
+  justify-content: space-between;
+  width: 100%;
+  background: white;
+  align-items: center;
+  padding: 15px 20px;
+}
+main.main > article.flex header div.flex {
+  align-items: center;
+  position: relative;
+}
+main.main > article.flex header input {
+  padding: 10px;
+  padding-left: 30px;
+  border-radius: 10px;
+  border: solid 1px #c1c1c1;
+  width: 160px;
+  transition: var(--main-transiton);
+}
+main.main > article.flex header input:focus {
+  width: 220px;
+}
+main.main > article.flex header div.search label {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 8px;
+  color: var(--sub-color);
+  cursor: pointer;
+}
+main.main > article.flex header img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}
+main.main > article.flex header i {
+  padding-right: 20px;
+}
+main.main > article.flex header i:after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: red;
+  border-radius: 50%;
+  top: 5px;
+  left: 16px;
+}
+
+/*end header*/
+main.main main {
+  width: 100%;
+}
+.main-text {
+  position: relative;
+  width: fit-content;
+  padding-bottom: 10px;
+  font-size: 32px;
+  margin: 10px 0 40px;
+}
+.main-text::before,
+.main-text::after {
+  content: "";
+  height: 3.5px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 6px;
+}
+.main-text::before {
+  background: white;
+  width: 75%;
+}
+.main-text::after {
+  background: black;
+  width: 25%;
+}
+
+main div.grid > div.flex {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-bottom: 10px;
+  position: relative;
+  box-shadow: 0 0 10px #e2e2e2;
+}
+main div.grid > div.flex.welcome {
+  justify-content: flex-end;
+}
+main div.grid > div.flex div.info {
+  background: var(--b-eee);
+  padding: 20px;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  position: relative;
+}
+main div.grid > div.flex div.info img {
+  width: 200px;
+}
+main div.grid > div.flex div.info img.img {
+  width: 90px;
+  position: absolute;
+  bottom: -26%;
+  border-radius: 50%;
+  border: solid 6px white;
+}
+main div.grid > div.flex h1 {
+  width: 100%;
+  font-size: 25px;
+}
+main div.grid > div.flex p {
+  font-size: 15px;
+  font-weight: 100;
+  color: var(--sub-color);
+  margin: 10px 0 15px;
+  width: 100%;
+}
+main div.grid > div.flex.welcome > div.text {
+  padding: 20px;
+  width: 100%;
+  justify-content: space-around;
+  border-bottom: solid 1px var(--b-eee);
+  border-top: solid 1px var(--b-eee);
+}
+
+main div.grid > div.flex.welcome > div.text h3 {
+  text-align: center;
+  font-size: 17px;
+}
+main div.grid > div.flex a.blue-button {
+  background: var(--blue-color);
+  color: white;
+  margin: 20px 20px 30px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: var(--main-transiton);
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+main div.grid > div.flex a.blue-button:hover {
+  background: var(--blue-hover);
+}
+main div.grid > div.draft {
+  justify-content: flex-end;
+}
+main div.grid > div.draft input,
+main div.grid > div.draft textarea {
+  width: 100%;
+  border-radius: 6px;
+  padding: 10px;
+  background: var(--b-eee);
+  border: 0;
+}
+main div.grid > div.draft input {
+  margin-bottom: 15px;
+  height: 40px;
+}
+main div.grid > div.draft textarea {
+  min-height: 180px;
+  resize: none;
+}
+main div.grid > div.draft a.blue-button {
+  margin: 20px 0;
+}
+
+/*start targets*/
+main div.grid > div.target > div.flex {
+  width: 100%;
+  margin-bottom: 15px;
+}
+main div.grid > div.target > div.flex i {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  width: 80px;
+  justify-content: center;
+}
+main div.grid > div.target > div.flex i.money {
+  background: #cce3ff;
+  color: var(--blue-color);
+}
+main div.grid > div.target > div.flex i.code {
+  background: #fdecce;
+  color: var(--orang-color);
+}
+main div.grid > div.target > div.flex i.team {
+  background: #d3f3df;
+  color: var(--green-color);
+}
+main div.grid > div.target > div.flex > article {
+  padding: 10px;
+  width: calc(100% - 80px);
+  position: relative;
+}
+main div.grid > div.target > div.flex p {
+  width: fit-content;
+  margin: 0 0 10px;
+}
+main div.grid > div.target > div.flex > article > span {
+  position: absolute;
+  padding: 4px 6px;
+  top: 33px;
+  right: 0;
+  color: white;
+  border-radius: 4px;
+}
+
+main div.grid > div.target > div.flex > article > div {
+  width: 100%;
+  height: 4px;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+main div.grid > div.target > div.flex > article > div {
+  position: relative;
+}
+main div.grid > div.target > div.flex > article > div.money {
+  background: #cce3ff;
+}
+main div.grid > div.target > div.flex > article > div.code {
+  background: #fdecce;
+}
+main div.grid > div.target > div.flex > article > div.team {
+  background: #d3f3df;
+}
+main div.grid > div.target > div.flex > article > div span {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main div.grid > div.target > div.flex > article > div.money span {
+  background: var(--blue-color);
+}
+main div.grid > div.target > div.flex > article > div.code span {
+  background: var(--orang-color);
+}
+main div.grid > div.target > div.flex > article > div.team span {
+  background: var(--green-color);
+}
+main div.grid > div.target > div.flex > article > div span:before {
+  content: "";
+  position: absolute;
+  right: -15px;
+  padding: 4px 6px;
+  background: red;
+  border-radius: 5px;
+  color: white;
+  top: -37px;
+}
+main div.grid > div.target > div.flex > article > div.money span:before {
+  background: var(--blue-color);
+  content: "80%";
+}
+main div.grid > div.target > div.flex > article > div.code span:before {
+  background: var(--orang-color);
+  content: "55%";
+}
+main div.grid > div.target > div.flex > article > div.team span:before {
+  content: "75%";
+  background: var(--green-color);
+}
+main div.grid > div.target > div.flex > article > div span:after {
+  content: "";
+  position: absolute;
+  border: solid 7px;
+  right: -5px;
+  top: -14px;
+}
+main div.grid > div.target > div.flex > article > div.team span:after {
+  border-color: var(--green-color) transparent transparent transparent;
+}
+main div.grid > div.target > div.flex > article > div.code span:after {
+  border-color: var(--orang-color) transparent transparent transparent;
+}
+main div.grid > div.target > div.flex > article > div.money span:after {
+  border-color: var(--blue-color) transparent transparent transparent;
+}
+/*end targets*/
+
+/*start ticket*/
+main div.grid > div.ticket > div.flex {
+  width: 100%;
+  gap: 20px;
+}
+main div.grid > div.ticket > div.flex > div.flex-direction {
+  flex: 47%;
+  padding: 20px 30px;
+  border: solid 1px #aaa;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+main div.grid > div.ticket > div.flex > div.flex-direction p {
+  width: fit-content;
+}
+main div.grid > div.ticket > div.flex > div.flex-direction i.fa-regular {
+  color: var(--orang-color);
+  margin-bottom: 10px;
+}
+main div.grid > div.ticket > div.flex > div.flex-direction i.fa-spinner {
+  color: var(--blue-color);
+  margin-bottom: 10px;
+}
+main div.grid > div.ticket > div.flex > div.flex-direction i.fa-circle-check {
+  color: var(--green-color);
+  margin-bottom: 10px;
+}
+main
+  div.grid
+  > div.ticket
+  > div.flex
+  > div.flex-direction
+  i.fa-rectangle-xmark {
+  color: var(--red-color);
+  margin-bottom: 10px;
+}
+/*end ticket*/
+
+/*start news*/
+
+main div.grid > div.news > div.flex {
+  align-items: center;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  width: 100%;
+}
+main div.grid > div.news > div.flex:not(:last-child) {
+  border-bottom: solid 1px #ccc;
+}
+main div.grid > div.news > div.flex:last-child {
+  padding-bottom: 0;
+}
+main div.grid > div.news > div.flex img {
+  width: 100px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+main div.grid > div.news > div.flex > div.flex-direction {
+  flex: 1;
+  padding: 10px 10px 10px 20px;
+  align-items: flex-start;
+}
+main div.grid > div.news > div.flex > div.flex-direction span {
+  color: var(--sub-color);
+  margin-top: 10px;
+  font-size: 15px;
+}
+main div.grid > div.news > div.flex > article {
+  height: fit-content;
+  padding: 5px 10px;
+  background: var(--b-eee);
+  border-radius: 7px;
+  font-weight: bolder;
+}
+/*end news*/
+
+/*start tasks*/
+main div.grid > div.tasks h1 {
+  margin-bottom: 10px;
+}
+main div.grid > div.tasks > div {
+  width: 100%;
+  margin-bottom: 10px;
+  position: relative;
+  align-items: flex-start;
+  justify-items: center;
+  height: fit-content;
+  padding-right: 28px;
+}
+main div.grid > div.tasks > div:not(:last-child) {
+  border-bottom: solid 1px #ccc;
+}
+main div.grid > div.tasks > div:last-child {
+  opacity: 0.5;
+}
+main div.grid > div.tasks > div:last-child h2,
+main div.grid > div.tasks > div:last-child p {
+  text-decoration: line-through;
+}
+main div.grid > div.tasks > div i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: var(--main-transiton);
+  cursor: pointer;
+}
+main div.grid > div.tasks > div i:hover {
+  color: var(--red-color);
+}
+/*end tasks*/
+
+/*start search*/
+
+main div.grid > div.search > div {
+  justify-content: space-between;
+  width: 100%;
+  font-size: 16px;
+  color: var(--sub-color);
+  margin: 10px 0;
+}
+main div.grid > div.search > article {
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+main div.grid > div.search > article h2 {
+  font-weight: 100;
+}
+main div.grid > div.search > article span {
+  padding: 4px 6px;
+  background: var(--b-eee);
+  font-size: 14px;
+  border-radius: 4px;
+  font-weight: bolder;
+  color: #333;
+}
+/*end search*/
+
+/*start uplodas*/
+main div.grid > div.uplodas > div.flex {
+  padding: 10px 0;
+  position: relative;
+  margin-bottom: 10px;
+  width: 100%;
+  align-items: center;
+}
+main div.grid > div.uplodas > div.flex:not(:last-child) {
+  border-bottom: solid 1px #ccc;
+}
+main div.grid > div.uplodas img {
+  width: 40px;
+}
+main div.grid > div.uplodas div.flex-direction {
+  padding: 0 15px;
+}
+main div.grid > div.uplodas div.flex-direction p {
+  margin: 0;
+}
+main div.grid > div.uplodas span {
+  padding: 4px 6px;
+  background: var(--b-eee);
+  font-size: 14px;
+  border-radius: 4px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/*end uplodas*/
+
+/*start project*/
+
+main div.grid > div.project img {
+  position: absolute;
+  opacity: 0.1;
+  right: 0;
+  bottom: 0;
+  width: 150px;
+}
+main div.grid > div.project .flex-direction {
+  align-items: flex-start;
+}
+main div.grid > div.project .flex-direction h2 {
+  position: relative;
+  padding-left: 40px;
+  margin: 15px 0;
+  font-weight: 100;
+  font-size: 18px;
+}
+main div.grid > div.project .flex-direction h2:not(:last-child):before {
+  content: "";
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: var(--blue-color);
+  border: solid 2px white;
+  outline: solid 2px var(--blue-color);
+  left: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+main div.grid > div.project .flex-direction h2:not(:last-child):after {
+  content: "";
+  position: absolute;
+  background: var(--blue-color);
+  width: 2px;
+  height: 128%;
+  left: 11px;
+  top: 106%;
+}
+main div.grid > div.project .flex-direction h2:nth-child(4):before {
+  animation: 3s opacity linear infinite;
+  transition: var(--main-transiton);
+}
+main div.grid > div.project .flex-direction h2:last-child:before {
+  content: "";
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: white;
+  border: solid 2px white;
+  outline: solid 2px var(--blue-color);
+  left: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/*end project*/
+
+/*start reminders*/
+
+main div.grid > div.reminders > div {
+  flex-direction: column;
+  width: 100%;
+  padding: 10px 0 10px 50px;
+  position: relative;
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: flex-end;
+}
+main div.grid > div.reminders > div p {
+  margin: 0;
+}
+main div.grid > div.reminders > div:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  background: var(--blue-color);
+  top: 0;
+  left: 30px;
+}
+main div.grid > div.reminders > div:nth-child(3):before {
+  background: var(--green-color);
+}
+main div.grid > div.reminders > div:nth-child(4):before {
+  background: var(--orang-color);
+}
+main div.grid > div.reminders > div:last-child:before {
+  background: var(--red-color);
+}
+main div.grid > div.reminders > div:after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  background: var(--blue-color);
+}
+main div.grid > div.reminders > div:nth-child(3):after {
+  background: var(--green-color);
+}
+main div.grid > div.reminders > div:nth-child(4):after {
+  background: var(--orang-color);
+}
+main div.grid > div.reminders > div:last-child:after {
+  background: var(--red-color);
+}
+/*end reminders*/
+
+/*start post*/
+
+main div.grid > div.post img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+main div.grid > div.post > div.post > div {
+  padding-left: 10px;
+  padding-top: 6px;
+}
+main div.grid > div.post > span {
+  font-size: 16px;
+  padding: 15px 0;
+  border: solid 1px;
+  border-color: #ccc transparent;
+  line-height: 2;
+  margin-bottom: 15px;
+}
+main div.grid > div.post > div {
+  flex-grow: 1;
+}
+main div.grid > div.post > div.space div {
+  align-items: center;
+}
+main div.grid > div.post > div.space i {
+  color: var(--sub-color);
+  font-size: 17px;
+}
+main div.grid > div.post > div.space span {
+  color: var(--sub-color);
+  font-size: 16px;
+  margin-left: 8px;
+}
+/*end post*/
+
+/*start social*/
+main div.grid > div.social > div.flex {
+  width: 100%;
+  margin: 10px 0;
+}
+main div.grid > div.social > div.flex i {
+  width: 60px;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: var(--main-transiton);
+}
+main div.grid > div.social > div.flex i:hover {
+  transform: rotate(3deg);
+}
+main div.grid > div.social > div.flex i.fa-twitter {
+  background: #1da1f2;
+}
+main div.grid > div.social > div.flex i.fa-facebook-f {
+  background: #1877f2;
+}
+main div.grid > div.social > div.flex i.fa-youtube {
+  background: red;
+}
+main div.grid > div.social > div.flex i.fa-instagram {
+  background-image: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+}
+
+main div.grid > div.social > div.flex > div {
+  flex-grow: 1;
+  align-items: center;
+  padding: 0 12px;
+}
+main div.grid > div.social > div.flex > div.twitter {
+  background: #d2ecfc;
+}
+main div.grid > div.social > div.flex > div.facebook {
+  background: #d1e4fc;
+}
+main div.grid > div.social > div.flex > div.youtube {
+  background: #ffcccc;
+}
+main div.grid > div.social > div.flex > div.instagram {
+  background: #ffc6ed;
+}
+main div.grid > div.social > div.flex span {
+  font-size: 16px;
+}
+main div.grid > div.social > div.flex span.twitter {
+  color: #1da1f2;
+}
+main div.grid > div.social > div.flex span.facebook {
+  color: #1877f2;
+}
+main div.grid > div.social > div.flex span.youtube {
+  color: red;
+}
+main div.grid > div.social > div.flex span.instagram {
+  color: #7a1256;
+}
+main div.grid > div.social > div.flex a {
+  padding: 4px 7px;
+  border-radius: 6px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+main div.grid > div.social > div.flex a.twitter {
+  background: #1da1f2;
+}
+main div.grid > div.social > div.flex a.facebook {
+  background: #1877f2;
+}
+main div.grid > div.social > div.flex a.youtube {
+  background: red;
+}
+main div.grid > div.social > div.flex a.instagram {
+  background: #e232a5;
+}
+/*end social*/
+
+/*start table*/
+main > div.table {
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+}
+main > div.table h1 {
+  font-size: 30px;
+}
+
+main > div.table > div.table table {
+  width: 100%;
+  border-spacing: 0px;
+}
+main > div.table > div.table table th {
+  background: var(--b-eee);
+  padding: 15px;
+  font-size: 17px;
+}
+main > div.table > div.table table tbody {
+  background: white;
+}
+main > div.table > div.table table tbody td {
+  transition: 0.2s;
+  font-size: 16px;
+  border: solid 1px;
+  border-color: transparent var(--b-eee) var(--b-eee) var(--b-eee);
+  padding: 10px;
+}
+main > div.table > div.table table tr:hover td {
+  background: #faf7f7;
+}
+
+main > div.table > div.table table tbody img {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  border: solid 3px white;
+}
+main > div.table > div.table table tbody img:not(:first-child) {
+  margin-left: -20px;
+}
+.orang-button {
+  background: var(--orang-color);
+  padding: 4px 6px;
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+}
+main > div.table .blue-button {
+  background: var(--blue-color);
+  padding: 4px 6px;
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+}
+main > div.table .green-button {
+  background: var(--green-color);
+  padding: 4px 6px;
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+}
+main > div.table .red-button {
+  background: var(--red-color);
+  padding: 4px 6px;
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+}
+/*end table*/
+
+/*end main*/
+
+/*start setting pag*/
+
+main > div.grid > div.setting > div.space {
+  width: 100%;
+  align-items: center;
+}
+main > div.grid > div.setting > div.space span {
+  font-size: 18px;
+}
+div.button {
+  width: 70px;
+  height: 29px;
+  background: #ccc;
+  border-radius: 16px;
+  cursor: pointer;
+  position: relative;
+  transition: var(--main-transiton);
+}
+div.button:before {
+  content: "\f00d";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 4px;
+  color: #aaa;
+  transition: var(--main-transiton);
+}
+input:checked + .button {
+  background: var(--blue-color);
+}
+input:checked + .button:before {
+  content: "\f00c";
+  color: var(--blue-color);
+  left: 43px;
+}
+main > div.grid > div.setting > textarea {
+  width: 100%;
+  border: solid 1px #ccc;
+  padding: 10px;
+  height: 170px;
+  border-radius: 7px;
+  margin-bottom: 10px;
+}
+/*end setting page*/
+
+/*start info form*/
+
+main > div.grid > form.info {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-bottom: 10px;
+  position: relative;
+  box-shadow: 0 0 10px #e2e2e2;
+}
+main > div.grid > form.info h1 {
+  font-size: 25px;
+}
+main > div.grid > form.info p {
+  font-size: 15px;
+  font-weight: 100;
+  color: var(--sub-color);
+  margin: 10px 0 15px;
+  width: 100%;
+}
+main > div.grid > form.info label {
+  width: 100%;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: var(--sub-color);
+}
+main > div.grid > form.info input[type="text"] {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  border: solid 1px #aaa;
+}
+main > div.grid > form.info input[type="email"] {
+  width: 80%;
+  height: 40px;
+  padding: 10px;
+  border-radius: 6px 0px 0px 6px;
+  margin-bottom: 10px;
+  border: solid 1px #aaa;
+  border-right: 0;
+  background: #f0f4f8;
+}
+main > div.grid > form.info input[type="submit"] {
+  width: 20%;
+  height: 40px;
+  padding: 10px;
+  border-radius: 0 6px 6px 0;
+  margin-bottom: 10px;
+  color: white;
+  background: var(--blue-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  border: solid 1px #aaa;
+  transition: var(--main-transiton);
+}
+main > div.grid > form.info input[type="submit"]:hover {
+  background: var(--blue-hover);
+}
+/*end info form*/
+
+/*start security*/
+
+main div.grid > div.security > div.space {
+  width: 100%;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px 0;
+}
+main div.grid > div.security > div.space:not(:last-child) {
+  border-bottom: solid 1px #ccc;
+}
+
+main div.grid > div.security > div.space h2 {
+  font-weight: normal;
+}
+main div.grid > div.security > div.space a {
+  margin: 0;
+  font-size: 14px;
+  transition: var(--main-transiton);
+}
+main div.grid > div.security > div.space a.orang-button:hover {
+  background: #db8900;
+}
+
+/*end security*/
+
+/*start social*/
+main div.grid > div.social-info > div.flex {
+  width: 100%;
+  margin-bottom: 15px;
+  border: solid 1px #ccc;
+  height: fit-content;
+}
+main div.grid > div.social-info > div.flex:focus-within label {
+  color: black;
+}
+main div.grid > div.social-info > div.flex label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  background: #f6f6f6;
+  border-right: solid 1px #ccc;
+  color: var(--sub-color);
+  transition: var(--main-transiton);
+  font-size: 20px;
+}
+main div.grid > div.social-info > div.flex input {
+  flex-grow: 1;
+  border: none;
+  height: 45px;
+  padding: 10px;
+  background: #f6f6f6;
+}
+
+/*end social*/
+
+/*start control*/
+
+main div.grid > div.control > div {
+  width: 100%;
+  margin-bottom: 20px;
+}
+main div.grid > div.control > div input {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+main div.grid > div.control > div label {
+  font-size: 18px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+/*end control*/
+
+/*start manager*/
+
+main div.grid > div.manager > div {
+  width: 100%;
+  margin-bottom: 10px;
+}
+main div.grid > div.manager > div label {
+  font-size: 19px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+main div.grid > div.manager > div input {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+main div.grid > div.manager > div.space {
+  gap: 20px;
+  padding-top: 20px;
+  border-top: solid 1px #eee;
+}
+main div.grid > div.manager > div.space label input {
+  display: none;
+}
+main div.grid > div.manager > div.space label {
+  margin: 0;
+  text-align: center;
+  flex: 28%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+main div.grid > div.manager > div.space label i {
+  display: block;
+  margin-bottom: 10px;
+}
+main div.grid > div.manager > div.space label span {
+  font-size: 16px;
+}
+main div.grid > div.manager > div.space label input:checked + div {
+  color: var(--blue-color);
+  border-color: var(--blue-color);
+}
+main div.grid > div.manager > div.space label div {
+  width: 100%;
+  height: 100%;
+  padding: 15px 22px;
+  border-radius: 10px;
+  border: solid 1px #ccc;
+  transition: var(--main-transiton);
+}
+/*end manager*/
+
+/*start profile page*/
+
+/*start profile*/
+
+main > div.profile {
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+main > div.profile > div.profile {
+  flex-basis: 100%;
+  border-bottom: solid 1px var(--b-eee);
+}
+main > div.profile > div.profile img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+main > div.profile > div.profile p {
+  color: var(--sub-color);
+  font-size: 17px;
+}
+main > div.profile > div.profile article {
+  width: 30%;
+  background: var(--b-eee);
+  height: 5px;
+  border-radius: 10px;
+  position: relative;
+}
+main > div.profile > div.profile article span {
+  border-radius: 10px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: var(--blue-color);
+  width: 70%;
+}
+main > div.profile > div.profile i {
+  color: var(--orang-color);
+  margin-right: 6px;
+  font-size: 14px;
+}
+main > div.profile > div.profile > span {
+  color: var(--sub-color);
+  font-size: 14px;
+}
+
+main > div.profile > div.info {
+  flex-grow: 1;
+}
+
+main > div.profile > div.info > div {
+  width: 100%;
+  padding: 15px 20px;
+  transition: var(--main-transiton);
+}
+main > div.profile > div.info > div:not(:last-child) {
+  border-bottom: solid 1px #eee;
+}
+main > div.profile > div.info > div:last-child {
+  margin-bottom: 0;
+}
+main > div.profile > div.info > div:hover {
+  background: #f6f6f6;
+}
+main > div.profile > div.info > div > p {
+  color: var(--sub-color);
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+main > div.profile > div.info > div span {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
+main > div.profile > div.info > div > div.space {
+  width: 100%;
+}
+main > div.profile > div.info > div > div.space p {
+  font-size: 14px;
+  color: var(--sub-color);
+  margin-bottom: 10px;
+}
+main > div.profile > div.info div.button {
+  height: 20px !important;
+}
+main > div.profile > div.info div.button:before {
+  width: 17px !important;
+  height: 17px !important;
+  font-size: 13px !important;
+}
+main > div.profile > div.info input:checked + .button:before {
+  left: 50px;
+}
+
+/*end profile*/
+
+/*start skills*/
+
+main > div.activites {
+  gap: 20px;
+}
+main > div.activites h1 {
+  font-size: 25px;
+}
+main > div.activites p {
+  font-size: 15px;
+  color: var(--sub-color);
+  margin-bottom: 10px;
+}
+main > div.activites > div.skills {
+  flex: 30%;
+  background: white;
+  border-radius: 10px;
+}
+main > div.activites > div.skills div.flex {
+  padding: 20px 0;
+  width: 100%;
+}
+main > div.activites > div.skills div.flex:not(:last-child) {
+  border-bottom: solid 1px var(--b-eee);
+}
+main > div.activites > div.skills div.flex span {
+  padding: 4px 6px;
+  background: var(--b-eee);
+  border-radius: 6px;
+  font-size: 14px;
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+main > div.activites > div.activites {
+  flex: 67%;
+  background: white;
+  border-radius: 10px;
+}
+main > div.activites > div.activites .space {
+  padding: 10px 0;
+  align-items: center;
+}
+main > div.activites > div.activites .space:not(:last-child) {
+  border-bottom: solid 1px var(--b-eee);
+}
+main > div.activites > div.activites img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+main > div.activites > div.activites .space div:nth-child(2) {
+  flex-grow: 1;
+  padding: 0 10px;
+}
+main > div.activites > div.activites .space div span {
+  font-size: 16px;
+}
+main > div.activites > div.activites .space div p {
+  margin-top: 10px;
+}
+
+/*end profile page*/
+
+/*start project page*/
+
+main > div.grid > div.projects img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: solid 3px white;
+  cursor: pointer;
+  margin: 10px 0 30px;
+}
+main > div.grid > div.projects > img:not(.first) {
+  margin-left: -15px;
+}
+main > div.grid > div.projects img:hover {
+  z-index: 2;
+}
+main > div.grid > div.projects .flex {
+  width: 100%;
+  padding: 20px 0;
+  border: solid 1px;
+  border-color: var(--b-eee) transparent;
+  margin-bottom: 10px;
+}
+main > div.grid > div.projects .flex span {
+  padding: 3px 5px;
+  background: var(--b-eee);
+  margin-right: 5px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+}
+main > div.grid > div.projects .space {
+  width: 100%;
+  align-items: center;
+  margin: 10px 0;
+}
+main > div.grid > div.projects .space div {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background: var(--b-eee);
+  border-radius: 10px;
+  overflow: hidden;
+}
+main > div.grid > div.projects .space div span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+main > div.grid > div.projects .space > span {
+  flex: 1;
+  text-align: right;
+  font-size: 14px;
+  color: var(--sub-color);
+  font-weight: bold;
+}
+main > div.grid > div.projects .date {
+  position: absolute;
+  color: var(--sub-color);
+  right: 13px;
+  top: 13px;
+  font-size: 12px;
+}
+/*end project page*/
+
+/*start courses pag*/
+
+main > div.cours {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+main > div.cours > div {
+  position: relative;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+main > div.cours > div img.back {
+  width: 100%;
+  margin-bottom: 10px;
+}
+main > div.cours > div img.back + div {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
+main > div.cours > div h2 {
+  margin-bottom: 10px;
+  font-size: 17px;
+  letter-spacing: -1px;
+}
+main > div.cours > div p {
+  line-height: 1.8;
+  font-size: 14px;
+  color: var(--sub-color);
+}
+main > div.cours > div > article {
+  justify-content: center;
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+main > div.cours > div > article span {
+  padding: 5px 9px;
+  background: var(--blue-color);
+  color: white;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+main > div.cours > div > article:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: var(--b-eee);
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+main > div.cours > div > div {
+  padding: 10px 20px 15px;
+}
+main > div.cours > div > div span {
+  position: relative;
+  color: var(--sub-color);
+  font-size: 14px;
+  font-weight: bold;
+}
+main > div.cours > div > div span:first-child:before {
+  content: "\f007";
+  font-family: "Font Awesome 6 Free";
+  font-size: 13px;
+  margin-right: 5px;
+}
+main > div.cours > div > div span:last-child:before {
+  content: "\24";
+  font-family: "Font Awesome 6 Free";
+  font-size: 13px;
+  margin-right: 3px;
+}
+main > div.cours > div img:last-child {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: solid 2px white;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+/*end courses page*/
+
+/*start friends page*/
+
+main > div.cours > article {
+  background: white;
+  border-radius: 6px;
+  position: relative;
+}
+main > div.cours > article .flex-direction {
+  margin-bottom: 10px;
+}
+main > div.cours > article img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 10px 0;
+}
+main > div.cours > article .flex-direction span {
+  margin: 10px 0;
+  color: var(--sub-color);
+  font-size: 14px;
+}
+main > div.cours > article > article {
+  padding: 15px 0;
+  border: solid 1px;
+  border-color: var(--b-eee) transparent;
+  margin-bottom: 10px;
+}
+main > div.cours > article > article span {
+  position: relative;
+  display: block;
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+main > div.cours > article > article span:before {
+  font-weight: 400;
+  font-family: "Font Awesome 6 Free";
+  margin-right: 10px;
+}
+main > div.cours > article > article span:first-child:before {
+  content: "\f118";
+}
+main > div.cours > article > article span:nth-child(2):before {
+  content: "\f386";
+  font-weight: 600;
+  margin-right: 0;
+}
+main > div.cours > article > article span:last-child:before {
+  content: "\f1ea";
+}
+main > div.cours > article .space {
+  padding-top: 10px;
+}
+main > div.cours > article .space p {
+  color: var(--sub-color);
+  margin-bottom: 10px;
+}
+main > div.cours > article .space a {
+  padding: 4px 6px;
+  color: white;
+  border-radius: 4px;
+  transition: var(--main-transiton);
+}
+main > div.cours > article .space a.bg-b:hover {
+  background: var(--blue-hover);
+}
+main > div.cours > article .space a.bg-r:hover {
+  background: #c83126;
+}
+main > div.cours .flot {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  display: flex;
+}
+main > div.cours .flot i {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--b-eee);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--sub-color);
+  margin-right: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: var(--main-transiton);
+}
+main > div.cours .flot i:hover {
+  color: white;
+  background: var(--blue-color);
+}
+/*end friends page*/
+
+/*start files page*/
+main > div.file {
+  gap: 20px;
+}
+main > div.file > .file {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 20px;
+}
+main > div.file > .file img {
+  width: 60px;
+  margin: 10px 0;
+  transition: var(--main-transiton);
+}
+main > div.file > .file .file:hover img {
+  transform: rotate(4deg);
+}
+main > div.file > .file h4 {
+  font-size: 14px;
+  margin: 10px 0;
+}
+main > div.file > .file > .file {
+  position: relative;
+}
+main > div.file > .file > .file > div {
+  border-radius: 10px;
+  position: relative;
+  padding: 20px 10px 0;
+  background: white;
+  position: relative;
+  box-shadow: 0 0 20px var(--b-eee);
+}
+main > div.file > .file > .file > div > p {
+  font-size: 14px;
+  color: var(--sub-color);
+  margin-bottom: 10px;
+}
+main > div.file > .file > .file .space {
+  padding: 12px 0;
+  border-top: solid 1px var(--b-eee);
+}
+main > div.file > .file > .file .space p {
+  color: var(--sub-color);
+  font-size: 14px;
+}
+main > div.file > .file > .file i {
+  color: var(--sub-color);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+main > div.file > .static {
+  width: 260px;
+  align-items: flex-start;
+}
+main > div.file > .static > .static {
+  background: white;
+  padding: 20px 10px 0;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px var(--b-eee);
+}
+main > div.file > .static h1 {
+  font-size: 22px;
+}
+
+main > div.file > .static > .static > div {
+  border: solid 1px var(--b-eee);
+  padding: 8px 10px;
+  margin-bottom: 15px;
+  align-items: center;
+  border-radius: 5px;
+}
+main > div.file > .static > .static > div i {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+}
+main > div.file > .static > .static > div i.pdf {
+  background: #cce3ff;
+  color: var(--blue-color);
+}
+main > div.file > .static > .static > div i.img {
+  color: var(--green-color);
+  background: #d3f3df;
+}
+main > div.file > .static > .static > div i.word {
+  color: var(--red-color);
+  background: #fdd9d7;
+}
+main > div.file > .static > .static > div i.csv {
+  color: var(--orang-color);
+  background: #fdecce;
+}
+main > div.file > .static > .static > div div {
+  flex: 1;
+  padding-left: 10px;
+}
+main > div.file > .static > .static > div div span {
+  color: var(--sub-color);
+}
+main > div.file > .static > .static > div div p {
+  font-size: 14px;
+}
+main > div.file > .static > .static > div > p {
+  color: var(--sub-color);
+  font-size: 14px;
+}
+main > div.file > .static article {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+main > div.file > .static a {
+  padding: 10px 15px 10px 40px;
+  font-size: 15px;
+  background: var(--blue-color);
+  color: white;
+  border-radius: 6px;
+  position: relative;
+  transition: var(--main-transiton);
+}
+main > div.file > .static a:hover {
+  background: var(--blue-hover);
+}
+main > div.file > .static a:before {
+  content: "\f102";
+  font-family: "Font Awesome 6 Free";
+  font-weight: bold;
+  margin-right: 10px;
+  position: absolute;
+  left: 17px;
+  top: 12px;
+  font-size: 14px;
+  transition: var(--main-transiton);
+}
+main > div.file > .static a:hover:before {
+  animation: linear up infinite 0.7s;
+}
+/*end files page*/
+
+/*start plans page*/
+
+main > div.grid > .plans {
+  background: white;
+}
+main > div.grid > .plans .flex-direction {
+  color: white;
+  padding: 25px;
+  border: solid 3px white;
+  outline: solid 2px;
+}
+main > div.grid > .plans .flex-direction.bg-o {
+  outline-color: var(--orang-color);
+}
+main > div.grid > .plans .flex-direction.bg-b {
+  outline-color: var(--blue-color);
+}
+main > div.grid > .plans .flex-direction.bg-g {
+  outline-color: var(--green-color);
+}
+main > div.grid > .plans .flex-direction h2 {
+  font-size: 27px;
+  margin-bottom: 5px;
+}
+main > div.grid > .plans .flex-direction h1 {
+  font-size: 30px;
+  letter-spacing: 3px;
+  position: relative;
+}
+main > div.grid > .plans .flex-direction h1:before {
+  content: "\24";
+  position: absolute;
+  top: -2px;
+  font-size: 22px;
+  left: -15px;
+}
+
+main > div.grid > .plans > div:not(.flex-direction) {
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+main > div.grid > .plans > div:not(.flex-direction) .space {
+  padding: 15px 0;
+  border-bottom: solid 1px var(--b-eee);
+  align-items: center;
+}
+main > div.grid > .plans > div:not(.flex-direction) .space p {
+  font-size: 16px;
+}
+main > div.grid > .plans > div:not(.flex-direction) .space .before {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+main > div.grid > .plans > div:not(.flex-direction) .space .before:before {
+  right: 0;
+  content: "hello diyar";
+  position: absolute;
+  width: 61px;
+  background: black;
+  color: white;
+  top: -33px;
+  padding: 5px 10px;
+  font-size: 10px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s;
+  z-index: -1;
+}
+main > div.grid > .plans > div:not(.flex-direction) .space .before:after {
+  content: "";
+  border: solid 6px;
+  border-color: black transparent transparent transparent;
+  position: absolute;
+  right: 1px;
+  top: -12px;
+  opacity: 0;
+  transition: opacity 1s;
+  z-index: -1;
+}
+main
+  > div.grid
+  > .plans
+  > div:not(.flex-direction)
+  .space
+  .before:hover::before,
+main
+  > div.grid
+  > .plans
+  > div:not(.flex-direction)
+  .space
+  .before:hover::after {
+  opacity: 1;
+  z-index: 1;
+}
+main > div.grid > .plans > div:not(.flex-direction) .space i {
+  color: var(--sub-color);
+  cursor: pointer;
+  position: relative;
+  transition: var(--main-transiton);
+}
+main > div.grid > .plans > div:not(.flex-direction) .space i:hover {
+  color: black;
+}
+main > div.grid > .plans > div:not(.flex-direction) .space p:before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: bolder;
+  margin-right: 10px;
+}
+main > div.grid > .plans > div:not(.flex-direction) .space p.tro:before {
+  content: "\f00c";
+  color: var(--green-color);
+}
+main > div.grid > .plans > div:not(.flex-direction) .space p.fals:before {
+  content: "\f00d";
+  color: var(--red-color);
+}
+main > div.grid > .plans a {
+  color: white;
+  padding: 6px 10px;
+  font-size: 16px;
+  border-radius: 6px;
+}
+main > div.grid > .plans > p {
+  color: var(--sub-color);
+  font-size: 16px;
+  text-align: center;
+}
+/*end plans page*/
+
+/*animation start*/
+
+@keyframes opacity {
+  0%,
+  100% {
+    background: white;
+  }
+  50% {
+    background: var(--blue-color);
+  }
+}
+
+@keyframes up {
+  0%,
+  100% {
+    top: 12px;
+  }
+  50% {
+    top: 7px;
+  }
+}
+/*animation end*/
+
+/*strat media*/
+
+@media (max-width: 1901px) {
+  main > div.table > div.table table tbody td {
+    padding: 8px;
+    font-size: 14px;
+  }
+  main div.table .orang-button,
+  main div.table .red-button,
+  main div.table .blue-button,
+  main div.table .green-button {
+    font-size: 10px;
+  }
+  main > div.table > div.table table tbody img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (min-width: 1176px) {
+  main > div.profile > div.profile {
+    border-right: solid 1px #eee;
+    flex-basis: 230px;
+    border-bottom: none;
+  }
+  main > div.profile > div.info > div > p {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  main > div.profile > div.profile article {
+    width: 70%;
+  }
+}
+@media (max-width: 994px) {
+  main > div.table > div.table {
+    overflow-x: auto;
+  }
+  main > div.table > div.table table {
+    min-width: 680px;
+  }
+}
+
+@media (max-width: 836px) {
+  main div.grid > div.flex div.info img:nth-child(2) {
+    width: 170px;
+    visibility: hidden;
+  }
+  main div.grid > div.flex div.info img.img {
+    left: 50%;
+    transform: translatex(-50%);
+  }
+  main div.grid > div.flex.welcome > div.text {
+    flex-direction: column;
+  }
+  main div.grid > div.ticket > div.flex > div.flex-direction {
+    flex: 100%;
+  }
+  main div.grid > div.news > div.flex {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+  main > div.activites > div.activites .space {
+    flex-direction: column;
+    text-align: center;
+  }
+  main > div.activites > div.activites .space div:nth-child(2) {
+    padding: 10px 0;
+  }
+  main > div.activites > div.skills div.flex {
+    justify-content: center;
+  }
+  main > div.profile > div.info > div > div.space > div,
+  main > div.profile > div.info > div > div.space > label {
+    flex-basis: 50%;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 10px;
+  }
+  main > div.file {
+    flex-direction: column-reverse;
+  }
+  main > div.file > .static {
+    width: 100%;
+  }
+  main > div.file > .static h1 {
+    text-align: center;
+  }
+  main > div.file > .file {
+    width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  nav {
+    width: auto;
+    padding: 20px 10px;
+  }
+  nav h1 {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  nav h1::before,
+  nav h1::after {
+    display: none;
+  }
+  nav div.flex-direction a {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+  nav div.flex-direction a span {
+    display: none;
+  }
+  main.main > article.flex {
+    width: calc(100% - 60px);
+  }
+  main > div.profile > div.profile {
+    flex-basis: 100%;
+  }
+  main > div.profile > div.profile article {
+    width: 30%;
+  }
+  main > div.profile > div.info > div > div.space {
+    flex-direction: column;
+  }
+  main > div.grid > div.projects img {
+    width: 40px;
+    height: 40px;
+  }
+  main > div.grid > div.projects .flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  main > div.grid > div.projects .flex span {
+    margin: 0 0 6px 0;
+    font-size: 13px;
+  }
+  main > div.grid > div.projects .space {
+    flex-direction: column;
+  }
+  main > div.grid > div.projects .space div {
+    flex: auto;
+    width: 70%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 520px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(306px, 1fr));
+  }
+  main div.grid > div.news > div.flex > div.flex-direction {
+    align-items: center;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+  main div.grid > div.flex h1,
+  main > div.table h1,
+  main > div.grid > form.info h1,
+  main > div.activites h1 {
+    font-size: 20px;
+  }
+  main div.grid > div.flex p,
+  main > div.grid > form.info p,
+  main > div.activites p,
+  main > div.grid > div.projects .space > span {
+    font-size: 13px;
+  }
+  main div.grid > div.social > div.flex span,
+  main > div.grid > .plans > div:not(.flex-direction) .space i {
+    font-size: 13px;
+  }
+  main div.grid > div.social > div.flex i {
+    width: 45px;
+    height: 45px;
+  }
+  main div.grid > div.social > div.flex a {
+    padding: 4px;
+  }
+  main div.grid > div.social > div.flex > div {
+    padding: 7px;
+  }
+  main div.grid > div.project .flex-direction h2 {
+    font-size: 15px;
+    padding-left: 27px;
+  }
+  main div.grid > div.project .flex-direction h2:not(:last-child):before,
+  main div.grid > div.project .flex-direction h2:last-child:before,
+  main div.grid > div.reminders > div:after {
+    width: 11px;
+    height: 11px;
+  }
+  main div.grid > div.project .flex-direction h2:not(:last-child):after {
+    height: 273%;
+    left: 8px;
+    top: 97%;
+  }
+  main div.grid > div.reminders > div {
+    padding: 10px 0 10px 32px;
+  }
+  main div.grid > div.reminders > div:before {
+    left: 20px;
+  }
+  main div.grid > div.target > div.flex i {
+    width: 60px;
+    height: 60px;
+  }
+  main div.grid > div.target > div.flex > article {
+    padding: 0 10px;
+  }
+  main div.grid > div.target > div.flex > article h2 {
+    font-size: 14px;
+  }
+  main div.grid > div.target > div.flex > article > div span:before {
+    font-size: 10px;
+    padding: 2px 4px;
+    top: -27px;
+  }
+  main div.grid > div.target > div.flex > article > div span:after {
+    border: solid 6px;
+    right: -7px;
+    top: -13px;
+  }
+  main.main main {
+    padding: 20px 15px;
+  }
+  main.main > article.flex header {
+    padding: 10px 15px;
+  }
+  main.main > article.flex header input {
+    height: 30px;
+  }
+  main.main > article.flex header img {
+    height: 30px;
+    width: 30px;
+  }
+  .main-text {
+    font-size: 28px;
+  }
+  main.main > article.flex header input {
+    width: 20px;
+    padding: 0;
+    padding-left: 30px;
+    font-size: 10px;
+  }
+  main.main > article.flex header input:focus {
+    width: 140px;
+  }
+  main.main > article.flex header div.search label,
+  main > div.grid > .plans > p {
+    font-size: 14px;
+  }
+  main > div.grid > div.setting > div.space,
+  main div.grid > div.security > div.space {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  main div.grid > div.manager > div.space label {
+    flex: 47%;
+  }
+  main > div.grid > form.info input[type="text"],
+  main > div.grid > form.info input[type="email"],
+  main > div.grid > form.info input[type="submit"] {
+    height: 35px;
+  }
+  main > div.grid > form.info input[type="submit"] {
+    font-size: 14px;
+    padding: 0;
+  }
+  main > div.grid > form.info label,
+  main > div.grid > .plans > div:not(.flex-direction) .space p {
+    font-size: 14px;
+  }
+  div.button {
+    width: 60px;
+    height: 22px;
+  }
+
+  div.button:before {
+    width: 18px;
+    height: 18px;
+    font-size: 13px;
+  }
+
+  input:checked + .button:before {
+    left: 39px !important;
+  }
+  main div.grid > div.social-info > div.flex input,
+  main div.grid > div.social-info > div.flex label {
+    height: 35px;
+  }
+  main div.grid > div.social-info > div.flex label {
+    width: 35px;
+    font-size: 14px;
+  }
+  main div.grid > div.control > div label {
+    font-size: 15px;
+    margin-left: 0;
+  }
+  main div.grid > div.control > div input {
+    transform: scale(1) translateY(2px);
+  }
+  main div.grid > div.manager > div label {
+    font-size: 17px;
+  }
+  main div.grid > div.manager > div input {
+    transform: translateY(1px) scale(1.2);
+  }
+  main div.grid > div.manager > div.space {
+    gap: 10px 20px;
+  }
+  main > div.grid > div.setting > textarea {
+    height: 100px;
+  }
+  main > div.profile > div.profile img {
+    width: 100px;
+    height: 100px;
+  }
+  main > div.grid > div.projects img {
+    width: 35px;
+    height: 35px;
+    margin: 10px 0 20px;
+  }
+  main > div.grid > div.projects .flex span {
+    font-size: 11px;
+  }
+  main > div.grid > div.projects .space div {
+    height: 4px;
+  }
+  main > div.cours > article img {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 410px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(206px, 1fr));
+  }
+  nav div.flex-direction a {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+    padding: 0;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  nav {
+    padding: 20px 5px;
+  }
+  nav h1 {
+    font-size: 12px;
+  }
+  main.main > article.flex {
+    width: calc(100% - 43px);
+  }
+  main div.grid > div.flex div.info img.img {
+    width: 75px;
+  }
+  .main-text {
+    font-size: 26px;
+  }
+  main div.grid > div.flex a.blue-button {
+    font-size: 11px;
+  }
+  main div.grid > div.draft input {
+    height: 35px;
+  }
+  main div.grid > div.target > div.flex {
+    align-items: flex-end;
+  }
+  main div.grid > div.target > div.flex i {
+    width: 45px;
+    height: 45px;
+  }
+  main div.grid > div.news > div.flex > div.flex-direction span,
+  main > div.cours > div p,
+  main > div.cours > article .flex-direction span {
+    font-size: 13px;
+  }
+  h2 {
+    font-size: 15px !important;
+  }
+  main div.grid > div.flex h1,
+  main > div.table h1,
+  main > div.grid > form.info h1 {
+    font-size: 17px;
+  }
+  main div.grid > div.uplodas h3 {
+    font-size: 14px;
+  }
+  main div.grid > div.uplodas img {
+    width: 30px;
+  }
+  main div.grid > div.uplodas span,
+  main div.grid > div.social > div.flex a,
+  main > div.cours > article .space a {
+    font-size: 10px;
+  }
+  main div.grid > div.project .flex-direction h2,
+  main > div.cours > article > article span {
+    font-size: 14px;
+  }
+  main div.grid > div.post > span {
+    font-size: 14px;
+  }
+  main div.grid > div.post img {
+    width: 45px;
+    height: 45px;
+  }
+  main div.grid > div.social > div.flex span {
+    font-size: 11px;
+  }
+  main div.grid > div.social > div.flex i {
+    font-size: 20px;
+  }
+  main div.grid > div.flex div.info img:nth-child(2) {
+    display: none;
+  }
+  main.main > article.flex header i {
+    font-size: 16px;
+    padding-right: 14px;
+  }
+  main.main > article.flex header img {
+    width: 25px;
+    height: 25px;
+  }
+  main > div.grid > form.info input[type="text"],
+  main > div.grid > form.info input[type="email"],
+  main > div.grid > form.info input[type="submit"] {
+    height: 32px;
+    font-size: 12px;
+  }
+  main > div.grid > form.info label {
+    font-size: 13px;
+  }
+  main div.grid > div.security > div.space a {
+    font-size: 11px;
+  }
+  main > div.grid > div.setting > div.space span {
+    font-size: 16px;
+  }
+  main div.grid > div.social-info > div.flex label {
+    width: 22px;
+    font-size: 12px;
+  }
+  main div.grid > div.social-info > div.flex input,
+  main div.grid > div.social-info > div.flex label {
+    height: 30px;
+  }
+  main > div.profile > div.profile img {
+    width: 80px;
+    height: 80px;
+  }
+  main > div.cours > div > article span,
+  main > div.grid > .plans > div:not(.flex-direction) .space p {
+    font-size: 12px;
+  }
+  main > div.cours > div img:last-child {
+    width: 58px;
+    height: 58px;
+  }
+  main > div.cours {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  main > div.cours > article img {
+    width: 80px;
+    height: 80px;
+  }
+  main > div.cours > article .space p,
+  main
+    > div.file
+    > .static
+    > .static
+    > div
+    > p
+    main
+    > div.grid
+    > .plans
+    > div:not(.flex-direction)
+    .space
+    i,
+  main > div.grid > .plans > p,
+  main > div.file > .file > .file .space p,
+  main > div.file > .file > .file > div > p,
+  main > div.file > .static > .static > div div p {
+    font-size: 12px;
+  }
+  main > div.grid > .plans .flex-direction h2 {
+    font-size: 24px !important;
+  }
+  main > div.grid > .plans .flex-direction h1 {
+    font-size: 27px;
+  }
+  main > div.grid > .plans .flex-direction {
+    padding: 12px;
+  }
+  main > div.grid > .plans a {
+    padding: 4px 10px;
+    font-size: 13px;
+  }
+  main > div.file > .static h1 {
+    font-size: 20px;
+  }
+  main > div.file > .static a {
+    font-size: 13px;
+    padding: 10px 15px 10px 25px;
+  }
+  main > div.file > .static a:before {
+    font-size: 12px;
+    left: 9px;
+  }
+  main > div.file > .file img {
+    width: 50px;
+  }
+}
+/*end media*/
+input[type="file"] {
+  display: none;
+}
+img#profile {
+  object-fit: cover;
+}
